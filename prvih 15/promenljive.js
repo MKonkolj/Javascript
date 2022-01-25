@@ -157,13 +157,25 @@ let pozitivanNiz = [];
 let dvocifrenNiz = [];
 
 function absolute(array) {
-    return array.forEach(element => {
+    array.forEach(element => {
         pozitivanNiz.push(Math.abs(element));
-        return pozitivanNiz;
     });
+    return pozitivanNiz;
 }
-// let str = absolute(niz);
-// console.log(str);
+function doubleNum(array) {
+    array.forEach(element => {
+        if (element * element > 0 && element * element < 10000 ) {
+            dvocifrenNiz.push(element);
+        }
+    });
+    return dvocifrenNiz;
+}
+
+absolute(niz);
+doubleNum(niz);
+console.log(`Ovo je uneti niz:\n${niz}`);
+console.log(`Ovo je pozitivan niz:\n${pozitivanNiz}`);
+console.log(`a ovo je dvocifren niz:\n${dvocifrenNiz}`);
 
 
 
