@@ -5,3 +5,18 @@
 // - za vrednost jabuka ispisati u konzoli: Ja volim jabuke.
 // - za vrednost kruska ispisati u konzoli: XXXX je moje omiljeno voce.
 // - za vrednost breskva ispisati u konzoli: Mrzim sok od breskve.
+
+let voce = ["jabuka", "kruska", "breskva"];
+let mojOdabir = voce[Math.floor(Math.random()*3)];
+
+function biranjeVoca (odabranoVoce) {
+    if (odabranoVoce == voce[0]) {
+        console.log("Ja volim jabuke.");
+    } else if (odabranoVoce == voce[1]) {
+        console.log(`${odabranoVoce} je moje omiljeno voće.`);
+    } else if (odabranoVoce == voce[2]) {
+        console.log("Mrzim sok od breskve.");
+    }
+}
+
+biranjeVoca(mojOdabir);
