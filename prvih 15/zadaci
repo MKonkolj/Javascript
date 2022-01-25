@@ -1,0 +1,76 @@
+1. Napraviti HTML dokument i dodati sledeći JS kod u HTML dokument u okviru <body> dela:
+● let pozdrav = "Zdravo svima!";
+● console.log(pozdrav);
+
+2. Prebaciti kod iz prethodog zadatka u spoljni dokument pod nazivom "pozdrav.js" i referencirati
+ga u okviru <head> dela.
+
+3. Napraviti novi dokument "promenljive.js". U dokumentu:
+● izvršiti deklarisanje sledećih promenljiva "prva", "druga", "treca" i "cetvrta"
+● inicijalizirati promenljive vrednostima: 10, 20, 30 i 40. Poslednja vrednost, za promenljivu
+"cetvrta" je znakovni niz (string)
+
+4. U okviru dokumenta "promenljive.js":
+● dodati novu promenljivu "zbir", čija je vrednost zbir prethodnih promenljiva. Očekivana
+vrednost je broj 100. Ispisati vrednost ove promenljive u konzoli.
+● dodati novu promenljivu "spoj", čija je vrednost zbir promenljivih "prva", "druga", "treca" i
+"cetvrta". Očekivana vrednost je 6040. Ispisati vrednost ove promenljive u konzoli
+● dodati novu promenljivu "recenica". Napisati kod, koji će učiniti da vrednost ove
+promenljive bude: "Na pijaci jabuke koštaju 10 dinara, kruške 20 dinara, a breskve 40
+dinara." Ova rečenica treba da bude sagrađena nadovezivanjem stringova. Korititi već
+dostupne vrednosti i dopisati nove stringove. Ispisati ovu vrednost u konzoli
+
+5. Napisati skriptu koja će pronaći površinu trougla.
+● definišite 3 promenljive sa proizvoljnim vrednostima, koje su zapravo 3 dužine stranica
+trougla
+● površinu trougla ispisati u konzoli
+
+6. Napisati skriptu gde program uzima nasumični broj u opsegu između 1 i 10. (uključujući 1 i
+10) Zatim se od korisnika traži da unese broj za pretpostavku. Ukoliko se korisnički unos
+poklapa sa nasumičnim brojem, ispisati poruku u vidu alert poruke: “Pogodili ste broj!”, ukoliko
+se ne poklapa ispisati “Niste pogodili broj!”.
+
+7. Napraviti dva inputa koji su tipa text i dva dugmeta, jedan za množenje drugi za deljenje.
+Korisnik unosi 2 broja. Klikom na dugme množenje, rezultat 2 uneta broja ispisati u p element.
+● dodati dugme “Resetuj”, klikom na njega vrednosti iz oba inputa treba da se obrišu.
+
+8. Korisnik unosi 2 cela broja odvojena razmakom u vidu prompt-a. Napisati skriptu, koja će
+izračunati zbir dva data broja. Ukoliko su brojevi jednaki, izračunati njihov trostruki zbir. Rezultat
+ispisati u okviru p elementa - teskt je crvene boje (definisati boju kroz JS)
+
+9. U vidu prompt-a. Korisnik u prvo prompt-u unosi neki string. U drugom prompt-u unosi
+poziciju stringa sa koje želi da ukloni vrednost. Skripta treba da obriše karakter u okviru unetog
+stringa, na unetoj poziciji.
+● String: Ovo je string.
+● Pozicija: 2
+● Izlaz: Ov je string.
+
+10. Napraviti 2 diva. Jedan je za parne brojeve, drugi za neparne brojeve. Napraviti input koji je
+tipa number i dugme. Korisnik unosi broj u input i klikom na dugme, u zavisnosti od toga da li je
+paran broj, ili neparan smesta brojeve u div jedno ispod drugog.
+
+11. Dat je niz celih brojeva [-5, 6, 27, 31, 100, 49, -45, -30, 2, 28]. Napisati funkciju koja za niz
+koji je prosleđen kao argument vraća novi niz sa elementima brojeva koji su pozitivni.
+Napisati funkciju koja za niz koji je prosleđen kao argument vraća novi niz sa elementima
+brojeva koji su dvocifreni.
+
+12. Napraviti input type number, dugme ispod inputa “Unesite broj” i div ispod dugmeta. Klikom
+na dugme racuna se zbir svih do tada unetih brojeva i upisuje se u div. Ukoliko je broj negativan
+ispisati u alert-u da je broj negativan i broj ulazi u sumiranje.
+
+13. Napraviti dva inputa i dugme “Proveri”. U prvi i u drugi input uneti recenice. Klikom na
+dugme proveri ispitati da li su ove dve recenice anagrami. Anagrami su recenice koje imaju ista
+slova, zanemarujuci razmake. Da li su anagrami ispisati u vidu alert poruke.
+
+14. U okviru dokumenta "funkcije.js":
+a) napraviti novu funkciju "hrana" koja ima tri parametra. Izlaz funkcije je rečenica "Volim
+da jedem XXXX1, XXXX2 i XXXX3." Gde je XXXX1,2,3 vrednost parametara
+b) ispisati ovaj izlaz u konzoli
+
+15. Napraviti novi dokument "funkcije.js". U dokumentu:
+a) napisati funkciju koja će vršiti proračun zapremine valjka i vraćati je. Dati joj ime
+"zapremina". Funkciju napisati tako da može računati zapreminu bilo kojeg valjka, ako je poznat
+poluprečnik valjka i njegova visina. Ovi podaci se prosleđuju u vidu parametra funkcije.
+b) Ispisati u konzoli rezultat u slučaju kada je poluprečnik 2m, a visina 4m. S tim da izlaz
+treba formatirati ovako: "Zapremina valjka je XXXXm3.". Gde je XXXX vrednost proračunate
+zapremine.
