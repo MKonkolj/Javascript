@@ -21,3 +21,12 @@ function zapremina (r, H) {
     return `Zapremina valjka je ${V}m3.`;
 }
 //console.log(zapremina (2, 4));
+
+// Zadatak 16 //////////////////////////////////////////////////////////
+// 16. U okviru dokumenta "funkcije j:
+// a) Napraviti anonimnu funkciju koja je samoizvršavajuća. Funkcija treba da ispiše u-
+// konzoli rečenicu: "Dobar dan."
+
+// (function () {
+//     console.log("Dobar dan.");
+// })();
