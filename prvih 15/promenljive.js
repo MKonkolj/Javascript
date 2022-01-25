@@ -1,6 +1,7 @@
 // svaki zadatak je u funkciji, zakomentariosao sam samo pozivanje funkcije zadatka ////
 
 
+
 // Zadatak 3 i 4 //////////////////////////////////////////////////////////
 // Napraviti novi dokument "promenljive.js". U dokumentu:
 // ● izvršiti deklarisanje sledećih promenljiva "prva", "druga", "treca" i "cetvrta"
@@ -212,6 +213,7 @@ function nizovi () {
 // nizovi ();
 
 
+
 // Zadatak 12 //////////////////////////////////////////////////////////
 // 12. Napraviti input type number, dugme ispod inputa “Unesite broj” i div ispod dugmeta. Klikom na dugme racuna se zbir svih do tada unetih brojeva i upisuje se u div. Ukoliko je broj negativan ispisati u alert-u da je broj negativan i broj ulazi u sumiranje.
 
@@ -240,6 +242,7 @@ function sumiranje() {
     })
 }
 // sumiranje();
+
 
 
 // Zadatak 13 //////////////////////////////////////////////////////////
