@@ -19,4 +19,4 @@ function biranjeVoca (odabranoVoce) {
     }
 }
 
-biranjeVoca(mojOdabir);
+// biranjeVoca(mojOdabir);
