@@ -62,32 +62,80 @@ function skolskiPribor () {
 // Goran 155cm
 // Milan 172cm
 // Ivan 166cm
+function visinaDjaka () {
 
-document.getElementsByClassName("body").innerHTML = ``
+    // ispis tabele u HTML-u
+    const djaci = [
+        {ime: "Milica", visina: "153cm"},
+        {ime: "Zorica", visina: "129cm"},
+        {ime: "Mirko", visina: "145cm"},
+        {ime: "Dejan", visina: "167cm"},
+        {ime: "Aleksandar", visina: "164cm"},
+        {ime: "Ivana", visina: "133cm"},
+        {ime: "Miloš", visina: "174cm"},
+        {ime: "Gordana", visina: "143cm"},
+        {ime: "Nemanja", visina: "187cm"},
+        {ime: "Pavle", visina: "152cm"},
+        {ime: "Jelena", visina: "173cm"},
+        {ime: "Danica", visina: "146cm"},
+        {ime: "Vladimir", visina: "162cm"},
+        {ime: "Vesna", visina: "173cm"},
+        {ime: "Tanja", visina: "149cm"},
+        {ime: "Anica", visina: "169cm"},
+        {ime: "Bojan", visina: "171cm"},
+        {ime: "Goran", visina: "155cm"},
+        {ime: "Milan", visina: "172cm"},
+        {ime: "Ivan", visina: "172cm"}
+    ];
+    
+    document.getElementsByTagName("body")[0].innerHTML = 
+    `<table>
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Visina</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    <button>Ko je najviši?</button>
+    <p id="rezultat"></p>`
+    
+    djaci.forEach(djak => {
+        document.getElementsByTagName("tbody")[0].innerHTML += `<tr><td>${djak.ime}</td><td>${djak.visina}</td></tr>`
+    });
+    
+    //određivanje najvišeg
+    const colVisine = document.querySelectorAll("td:nth-child(even)");
+    const colImena = document.querySelectorAll("td:nth-child(odd)");
+    
+    let visine = [];
+    let najvisina = [];
+    
+    colVisine.forEach(cell => {
+        visine.push(parseInt(cell.innerText));
+        najvisina.push(parseInt(cell.innerText));
+    });
+    
+    najvisina = najvisina.sort()[najvisina.length - 1];
+    
+    //stilizacija tabele na klik
+    const btn = document.getElementsByTagName("button")[0];
 
-const djaci = [
-    {ime: "Milica", visina: "153cm"},
-    {ime: "Zorica", visina: "129cm"},
-    {ime: "Mirko", visina: "145cm"},
-    {ime: "Dejan", visina: "167cm"},
-    {ime: "Aleksandar", visina: "164cm"},
-    {ime: "Ivana", visina: "133cm"},
-    {ime: "Miloš", visina: "174cm"},
-    {ime: "Gordana", visina: "143cm"},
-    {ime: "Nemanja", visina: "187cm"},
-    {ime: "Pavle", visina: "152cm"},
-    {ime: "Jelena", visina: "173cm"},
-    {ime: "Danica", visina: "146cm"},
-    {ime: "Vladimir", visina: "162cm"},
-    {ime: "Vesna", visina: "173cm"},
-    {ime: "Tanja", visina: "149cm"},
-    {ime: "Anica", visina: "169cm"},
-    {ime: "Bojan", visina: "171cm"},
-    {ime: "Goran", visina: "155cm"},
-    {ime: "Milan", visina: "172cm"},
-    {ime: "Ivan", visina: "172cm"}
-];
+    btn.onclick = () => {
+        let najvisiVisina = colVisine[visine.indexOf(najvisina)];
+        let najvisiIme = colImena[visine.indexOf(najvisina)];
+        najvisiVisina.style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
+        najvisiIme.style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
+        
+        document.getElementById("rezultat").innerHTML = `Najviši je ${najvisiIme.innerHTML} sa visinom ${najvisiVisina.innerHTML}.`
+    }
+}
+visinaDjaka ();
 
-djaci.forEach(djak => {
-    document.getElementsByClassName("tbody");
-});
+
+
+
+//kada mi indexOf vrati index najviše visine, isit index mogu da iskoristim za ime
+//ako ima više njih sa istom visinom onda treba da indexOf provučem kroz for loop da proveri sve?
