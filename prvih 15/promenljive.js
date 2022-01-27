@@ -197,7 +197,7 @@ function nizovi () {
     }
     function doubleNum(array) {
         array.forEach(element => {
-            if (element * element > 0 && element * element < 10000 ) {
+            if (element * element > 100 && element * element < 10000 ) {
                 dvocifrenNiz.push(element);
             }
         });
@@ -256,14 +256,16 @@ function anagramChecker () {
     const btn = document.querySelector("button");
     
     btn.addEventListener("click", () => {
-        let slova1 = recenica1.value.split("").sort();
-        let slova2 = recenica2.value.split("").sort();
+        let slova1 = recenica1.value.split("").sort().join("").trim();
+        let slova2 = recenica2.value.split("").sort().join("").trim();
     
-        if (slova1.join("") == slova2.join("")) {
+        if (slova1 == slova2) {
             alert("✔️ Rečenice jesu anagrami!");
         } else {
             alert("❌ Rečenice nisu anagrami!");
         }
     })
+
+
 }
-// anagramChecker ();
+anagramChecker ();

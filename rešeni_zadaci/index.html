@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            #wrapper {
+                overflow: hidden;
+            }
+
+            div#even, div#odd {
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                float: left;
+                margin-right: 15px;
+            }
+
+
+
+        </style>
+
+        <title></title>
+
+        <!-- 2. zadatak -->
+
+        <!-- <script src="pozdrav.js"></script> -->
+
+        <!-- 2. zadatak - kraj -->
+
+    </head>
+
+    <body>
+
+        <input id="first" type="text">
+        <input id="second" type="text">
+
+        <button id="multiply">Pomnoži</button>
+        <button id="divide">Podeli</button>
+        <button id="reset">Resetuj inpute</button>
+
+        <p style="height:30px;border:1px solid black" id="result"></p>
+
+        <input id="number" type="number"><br>
+        <button id="sort">Sortiraj brojeve</button>
+
+        <div id="wrapper">
+            <div id="even"></div>
+            <div id="odd"></div>
+        </div>
+
+        <div id="div"></div>
+
+        <script>
+
+            // 1. zadatak
+
+            //let pozdrav = "Zdravo svima!";
+            //console.log(pozdrav);
+
+            // 1. zadatak - kraj
+
+
+            // 3. zadatak
+
+            // let prva = 10;
+            // let druga = 20;
+            // let treca = 30;
+            // let cetvrta = "40";
+
+            // 3. zadatak - kraj
+
+            // 4. zadatak
+
+            //let zbir = prva + druga + treca + Number(cetvrta); // 60 + "40"
+            //let zbir = prva + druga + treca + parseInt(cetvrta); 
+            //console.log(zbir);
+
+            //let spoj = prva + druga + treca + cetvrta;
+            //console.log(spoj);
+
+            //let recenica = "Na pijaci jabuke kostaju " + prva + " dinara, kruske " + druga + " dinara, a breskve " + cetvrta + " dinara.";
+            //let recenica = `Na pijaci jabuke kostaju ${prva} dinara, kruske ${druga} dinara, a breske ${cetvrta} dinara.`;
+            //console.log(recenica);
+
+            // 4. zadatak - kraj
+
+
+            // 5. zadatak
+
+            // let a = 3;
+            // let b = 4;
+            // let c = 5;
+
+            // let s = (a + b + c) / 2; // a + b + c / 2
+            //console.log(s);
+
+            // let p = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            // console.log(p);
+
+            // 5. zadatak - kraj
+
+
+            // 6. zadatak
+
+            // let random_number = Math.floor((Math.random() * 10) + 1);
+            // console.log(random_number);
+            
+            // let user_input = prompt("Šta mislite koji je to broj?");
+            // //console.log(user_input);
+
+            // if(parseInt(user_input) == random_number)
+            //     alert("Čestitamo, pogodili ste broj!");
+
+            // else
+            //     alert("Nažalost, niste pogodili broj!");
+
+            // 6. zadatak - kraj
+
+
+            // 7. zadatak
+
+            //let first = document.getElementById("first");
+            // let first = document.querySelector("#first");
+            // let second = document.getElementById("second");
+
+            // document.getElementById("multiply").onclick = function()
+            // {
+            //     document.getElementById("result").innerHTML = parseInt(first.value) * parseInt(second.value);
+            // }
+            
+            // document.getElementById("divide").onclick = function()
+            // {
+            //     document.getElementById("result").innerHTML = parseInt(first.value) / parseInt(second.value);
+            // }
+
+            // document.getElementById("reset").onclick = function()
+            // {
+            //     first.value = "";
+            //     second.value = "";
+            // }
+
+            // 7. zadatak - kraj
+
+
+            // 8. zadatak 
+
+            // let user_input = prompt("Unesite dva broja i odvojite ih razmakom: (2 3)");
+            // user_input = user_input.split(" ");
+            // //console.log(user_input);
+
+            // let result = document.getElementById("result");
+
+            // if(parseInt(user_input[0]) == parseInt(user_input[1]))
+            //     result.innerHTML = (parseInt(user_input[0]) + parseInt(user_input[1])) * 3;
+
+            // else
+            //     result.innerHTML = parseInt(user_input[0]) + parseInt(user_input[1]);
+
+            // result.style.color = "red";
+
+            // 8. zadatak - kraj
+
+
+            // 9. zadatak
+
+            // let user_input = prompt("Unesite string: ");
+            // let position = prompt("Unesite poziciju sa koje zelite da obrisete karakter: (indeksi počinju od 0");
+
+            //console.log(user_input.slice(position, 1));
+            //console.log(user_input);
+
+            // console.log(user_input.slice(0, position) + user_input.slice(parseInt(position) + 1, user_input.length));
+
+            // 9. zadatak - kraj
+
+            // 10. zadatak
+
+            // let sort = document.getElementById("sort");
+            // let number = document.getElementById("number");
+            
+            // sort.onclick = function()
+            // {
+            //     if(parseInt(number.value) % 2 == 0)
+            //         document.getElementById("even").innerHTML = document.getElementById("even").innerHTML + `<p>${number.value}</p>`;
+
+            //     else
+            //         document.getElementById("odd").innerHTML += `<p>${number.value}</p>`;
+            // }
+
+            // 10. zadatak - kraj
+
+
+            // 11. zadatak
+
+            // function positiveNumbers(array)
+            // {
+            //     let positive_numbers = [];
+
+            //     for(let i = 0; i < array.length; i++)
+            //     {
+            //         if(array[i] >= 0)
+            //             positive_numbers.push(array[i]);
+            //     }
+
+            //     return positive_numbers;
+            // }
+
+            
+            // function twoDigitNumbers(array)
+            // {
+            //     let two_digit_numbers = [];
+
+            //     for(let i = 0; i < array.length; i++)
+            //     {
+            //         // if(array[i] >= 10 && array[i] <= 99 || array[i] <= -10 && array[i] >= -99)
+            //         //     two_digit_numbers.push(array[i]);
+
+            //         let current_number = array[i];
+
+            //         if(array[i] < 0)
+            //             current_number = array[i] * -1;
+
+            //         if(current_number >= 10 && current_number <= 99)
+            //             two_digit_numbers.push(array[i]);
+            //     }
+
+            //     return two_digit_numbers;
+            // }
+
+            // let array = [-5, 6, 27, 31, 100, 49, -45, -30, 2, 28];
+
+            // console.log(positiveNumbers(array));
+            // console.log(twoDigitNumbers(array));
+
+            // 11. zadatak - kraj
+
+
+            // 12. zadatak
+
+            // let number = document.getElementById("number");
+            // let sort = document.getElementById("sort");
+            // let div = document.getElementById("div");
+
+            // sort.onclick = function()
+            // {
+            //     if(div.innerHTML == "")
+            //         div.innerHTML = parseInt(number.value);
+
+            //     else
+            //         div.innerHTML = parseInt(div.innerHTML) + parseInt(number.value); 
+            // }
+
+            // let flag = 0;
+
+            // sort.onclick = function()
+            // {
+            //     if(flag == 0)
+            //     {
+            //         div.innerHTML = parseInt(number.value);
+            //         flag = 1;
+            //     }
+                
+            //     else
+            //     {
+            //         div.innerHTML = parseInt(div.innerHTML) + parseInt(number.value); 
+            //     }
+            // }
+
+            // 12. zadatak - kraj
+
+
+            // 13. zadatak
+
+            // let first = "asd";
+            // let second = "sA d";
+
+            // console.log(first.replace(/ /g, "").toLowerCase().split("").sort().join(""));
+
+            // first = first.replace(/ /g, "").toLowerCase().split("").sort().join("");
+           
+            // second = second.replace(/ /g, "").toLowerCase().split("").sort().join("");
+
+            // if(first == second)
+            //     alert("Reči su anagrami!");
+
+            // else
+            //     alert("Reči nisu anagrami!");
+
+            // 13. zadatak - kraj
+
+            // 16. zadatak 
+
+            (function()
+            {
+                console.log("Dobar dan!");
+            })();
+
+            // 16. zadatak - kraj
+
+        </script>
+
+    </body>
+
+</html>
