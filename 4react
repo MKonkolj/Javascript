@@ -1,10 +1,10 @@
-ES Modules
-let / const
-&& || if ternary
-Property shorthand / Destructing / Spread operator
-Function declarations / Arrow functions
-All datatypes
-Array methods: map, filter, forEach
-Fetch
-Promises / async/await
-Template literals
+    ES Modules
+✔️ let / const
+✔️ && || if ternary
+    Property shorthand / Destructing / Spread operator
+✔️ Function declarations / Arrow functions
+    All datatypes
+    Array methods: map, filter, forEach
+    Fetch
+    Promises / async/await
+✔️ Template literals

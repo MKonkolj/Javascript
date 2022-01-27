@@ -46,7 +46,7 @@ function hoverClick () {
             element.style.color = "";
         });
         element.addEventListener("click", () => {
-            element.innerHTML += "<em> Pritisnut sam</em>"
+            element.innerHTML += "<em>Pritisnut sam</em>"
         });
     });
 }

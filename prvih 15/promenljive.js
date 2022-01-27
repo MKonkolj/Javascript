@@ -13,15 +13,10 @@
 // ● dodati novu promenljivu "recenica". Napisati kod, koji će učiniti da vrednost ove promenljive bude: "Na pijaci jabuke koštaju 10 dinara, kruške 20 dinara, a breskve 40 dinara." Ova rečenica treba da bude sagrađena nadovezivanjem stringova. Korititi već dostupne vrednosti i dopisati nove stringove. Ispisati ovu vrednost u konzoli
 
 function ceneJabuka() {
-    let prva,
-        druga,
-        treca,
-        cetvrta;
-    
-    prva = 10;
-    druga = 20;
-    treca = 30;
-    cetvrta = "40";
+    let prva = 10,
+        druga = 20,
+        treca = 30,
+        cetvrta = "40";;
     
     // Zadatak 4
     let zbir = prva + druga + treca + parseInt(cetvrta);
@@ -226,7 +221,7 @@ function sumiranje() {
     let sum = 0;
     
     btn.addEventListener("click", () => {
-    
+
         if (input.value == "") {
             alert("Morate uneti broj");
     
@@ -268,4 +263,4 @@ function anagramChecker () {
 
 
 }
-anagramChecker ();
+// anagramChecker ();

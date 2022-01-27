@@ -74,3 +74,117 @@ poluprečnik valjka i njegova visina. Ovi podaci se prosleđuju u vidu parametra
 b) Ispisati u konzoli rezultat u slučaju kada je poluprečnik 2m, a visina 4m. S tim da izlaz
 treba formatirati ovako: "Zapremina valjka je XXXXm3.". Gde je XXXX vrednost proračunate
 zapremine.
+
+16. U okviru dokumenta "funkcije j:
+a) Napraviti anonimnu funkciju koja je samoizvršavajuća. Funkcija treba da ispiše u-
+konzoli rečenicu: "Dobar dan."
+
+ 
+
+17. Napraviti novi dokument "rezime js". U dokumentu:
+a) deklarisati dve varijable „sirina i „visina“. Ove varijable će služiti da se u njima
+skladište podaci o veličini pravougaonika u vidu string podataka.
+b) dodeliti varijablama prozivoljne brojeve tako da to budu string podaci, pri čemu je.
+jedan ceo broj, a drugi sa zarezom
+c) napraviti funkciju „proracun* tako da joj se prosleđuju vrednosti iz varijabli „sirina" i
+„visina* pri njenom izvršavanju. Zadatak funkcije je da izračuna obim i površinu datog
+pravougaonika i da vrati ove vrednosti u vidu poruke: "O=X0XXm\P=XXXXm2".
+d) testirati funkciju i rezultat funkcije ispisati u konzoli
+
+ 
+
+18. Napraviti 5 paragrafa sa sadržajem 1, 2, 3, 4, 5.
+• Kada se pređe mišem preko bilo kojeg paragrafa, njegova pozdinska boja se menja u
+zelenu, a boja teksta u belu.
+•  Prešli smo mišem preko nekog paragrafa, pozadina i boja teksta se promenila. Kada miš
+odmaknemo sa tog paragrafa boja pozadine se vraća na belu, a boja teksta na cmu.
+ikom na bilo koji paragraf, na trenutni sadržaj paragrafa se nadodaje poruka "Pritisnut sam"
+
+   
+
+19. Napraviti novi dokument „odlucivanja js.
+a) Deklarisati varijablu „broj" čija će vrednost biti nasumični ceo broj od 18 do 50.
+b) Napraviti strukturu za odlučivanje koja će reagovati na vrednost varijable „broj' na sledeći
+način:
+- za vrednosti od 18 do 25 ispisicaće se poruka u konzoli: Vaše godine XX nam ne
+odgovaraju, jer ste premladi.
+- za vrednosti od 26 do 35 ispisaće se poruka u konzoli: Vaše godine XX nam
+odgovaraju.
+- za vrednosti od 36 do 50 ispisaće se poruka u konzoli: Vaše godine XX nam ne
+odgovaraju, jer ste prestari.
+
+
+
+20. Napraviti novi dokument „odlucivanja2 js".
+a) Deklarisati niz sa identifikatorom „voce“ od tri elementa: jabuka, kruska i breskva.
+b) Odabrati i napraviti najoptimalniju strukturu za odlučivanje koja će reagovati na nasumičnu
+vrednost iz niza „voce“ na sledeći način:
+- za vrednost jabuka ispisati u konzoli: Ja volim jabuke.
+- za vrednost kruska ispisati u konzoli: XXXX je moje omiljeno voce.
+- za vrednost breskva ispisati u konzoli: Mrzim sok od breskve.
+
+
+
+21. Napraviti novi dokument „petlje.js“.
+a) Deklarisati niz sa identifikatorom „desetice“ od pet elemenata: 10, 20, 30, 40 i 50.
+b) Dodati na kraju niza element koji ima vrednost 60. Dodavanje obaviti na način koji bi važio za
+svaki niz, ali ne koristiti metode za objekat niza.
+c) Zameniti vrednost treceg elementa niza sa vrednošću 35.
+d) Ipisati u konzoli vrednosti svih elemenata koristeći for petlju.
+22. Napraviti novi dokument „objekti.js“.
+a) Deklarisati objekat sa identifikatorom „skPribor“. Objekat sadrži tri svojstva: olovka, hemijska i
+lenjir. Vrednosti za ova svojstva redom su: stabilo, staedtler i staedtler.
+b) Promeniti vrednost svojstva „lenjir“ u „precision“, a svojstva „olovka“ u „faber castell“
+c) Dodati novo svojstvo objektu „skPribor“ koje ima naziv "sveske". Vrednost ovog svojstva je
+niz od sledećih vrednosti: u linije, u kvadrate i prazna.
+d) Upotrebom metoda za nizove premestiti vrednost „prazna“ na početak niza.
+e) Dodati metod „izlistaj“ objektu koji izlastava u konzoli vrednost svojstva „sveske“
+
+
+
+23. Na sistematskom pregledu đaka utvrđene su sledeće visine. Smestiti ove podatke u HTML
+tabelu. Prva kolona: imena, druga kolona izmerene vrednosti.
+Napisati skriptu koja će preuzeti podatke iz ove tabele i izračunati koja osoba je najviša.
+Rezultat proračuna objavljuje se u p elementu ispod tabele u vidu poruke:
+Najviši je XXXX sa visinom XXXcm
+Takođe, pozadinska boja u redu u kojem je najviša osoba se boji u
+žutu boju.
+Program se izvršava pritiskom na dugme „Izračunaj ko je naviši“.
+Milica 153cm
+Zorica 12cm
+Mirko 145cm
+Dejan 167cm
+Aleksandar 164cm
+Ivana 133cm
+Miloš 174cm
+Gordana 143cm
+Nemanja 187cm
+Pavle 152cm
+Jelena 173cm
+Danica 146cm
+Vladimir 162cm
+Vesna 173cm
+Tanja 149cm
+Anica 169cm
+Bojan 171cm
+Goran 155cm
+Milan 172cm
+Ivan 166cm
+
+
+
+24. Napraviti funkciju koja računa nasumični datum u zadatom periodu.
+Dužina perioda se prosleđuje kao parametar funkcije u vidu broja dana, a početak perioda je
+trenutak izvršavanja funkcije.
+Izbor nasumičnog datuma prikazati u konzoli.
+Zadatak snimiti u dokumentu „datum.js“
+
+
+
+25. Napisati skriptu koja uzima unos iz prompt() dijaloga i vraća isti taj unos stim što između
+svakog karaktera dodaje razmak.
+Primer: ulazni podatak - „ULAZ“, izlazni podatak - „U L A Z“.
+Obrađeni izlaz vratiti alert() metodom.
+Ceo kod ove skripte napisati tako da se izvrši čim se HTML dokument učita.
+26. Napraviti jedan div. Prikazati 3 proizvoljne slike u HTML-u ispod diva.
+Klikom na bilo koju sliku, slika se prikazuje u divu.
