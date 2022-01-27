@@ -131,6 +131,9 @@ b) Dodati na kraju niza element koji ima vrednost 60. Dodavanje obaviti na nači
 svaki niz, ali ne koristiti metode za objekat niza.
 c) Zameniti vrednost treceg elementa niza sa vrednošću 35.
 d) Ipisati u konzoli vrednosti svih elemenata koristeći for petlju.
+
+
+
 22. Napraviti novi dokument „objekti.js“.
 a) Deklarisati objekat sa identifikatorom „skPribor“. Objekat sadrži tri svojstva: olovka, hemijska i
 lenjir. Vrednosti za ova svojstva redom su: stabilo, staedtler i staedtler.
