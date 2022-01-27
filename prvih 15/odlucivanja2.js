@@ -9,7 +9,6 @@
 let voce = ["jabuka", "kruska", "breskva"];
 let mojOdabir = voce[Math.floor(Math.random()*3)];
 
-function biranjeVoca (odabranoVoce) {
     if (odabranoVoce == voce[0]) {
         console.log("Ja volim jabuke.");
     } else if (odabranoVoce == voce[1]) {
@@ -17,6 +16,5 @@ function biranjeVoca (odabranoVoce) {
     } else if (odabranoVoce == voce[2]) {
         console.log("Mrzim sok od breskve.");
     }
-}
 
 // biranjeVoca(mojOdabir);
