@@ -62,12 +62,12 @@ function skolskiPribor () {
 // Goran 155cm
 // Milan 172cm
 // Ivan 166cm
-function visinaDjaka () {
+
 
     // ispis tabele u HTML-u
     const djaci = [
         {ime: "Milica", visina: "153cm"},
-        {ime: "Zorica", visina: "129cm"},
+        {ime: "Zorica", visina: "187cm"},
         {ime: "Mirko", visina: "145cm"},
         {ime: "Dejan", visina: "167cm"},
         {ime: "Aleksandar", visina: "164cm"},
@@ -82,8 +82,8 @@ function visinaDjaka () {
         {ime: "Vesna", visina: "173cm"},
         {ime: "Tanja", visina: "149cm"},
         {ime: "Anica", visina: "169cm"},
-        {ime: "Bojan", visina: "171cm"},
-        {ime: "Goran", visina: "155cm"},
+        {ime: "Bojan", visina: "187cm"},
+        {ime: "Goran", visina: "187cm"},
         {ime: "Milan", visina: "172cm"},
         {ime: "Ivan", visina: "172cm"}
     ];
@@ -112,27 +112,53 @@ function visinaDjaka () {
     
     let visine = [];
     let najvisina = [];
-    
+
     colVisine.forEach(cell => {
         visine.push(parseInt(cell.innerText));
         najvisina.push(parseInt(cell.innerText));
     });
     
     najvisina = najvisina.sort()[najvisina.length - 1];
+
+
+    //ovaj for loop prolazi kroz array cele kolone sa visinama i u indeksiNajvisih smešta indekse najviših učenika
+    let indeksiNajvisih = [0];
+
+    for (let i = 0; i < visine.length; i++){
+        if (visine[i] > visine[indeksiNajvisih[0]]) {
+            indeksiNajvisih = [];
+            indeksiNajvisih[0] = i;
+        } else if (visine[i] == visine[indeksiNajvisih[0]]) {
+            indeksiNajvisih.push(i);
+        }
+    }
     
     //stilizacija tabele na klik
     const btn = document.getElementsByTagName("button")[0];
+    const rezultat = document.getElementById("rezultat");
 
     btn.onclick = () => {
-        let najvisiVisina = colVisine[visine.indexOf(najvisina)];
-        let najvisiIme = colImena[visine.indexOf(najvisina)];
-        najvisiVisina.style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
-        najvisiIme.style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
+        let imenaZaIspis = "";
+        indeksiNajvisih.forEach(element => {
+            colVisine[element].style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
+            colImena[element].style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
+            }
+        );
+
+        for (let i = 0; i < indeksiNajvisih.length-2; i++) {
+            imenaZaIspis += `${colImena[indeksiNajvisih[i]].innerText}, `;
+        }
+        imenaZaIspis += `${colImena[indeksiNajvisih[indeksiNajvisih.length-2]].innerText} i ${colImena[indeksiNajvisih[indeksiNajvisih.length-1]].innerText}`
         
-        document.getElementById("rezultat").innerHTML = `Najviši je ${najvisiIme.innerHTML} sa visinom ${najvisiVisina.innerHTML}.`
+        if (indeksiNajvisih.length > 2) {
+            rezultat.innerHTML = `Najviši su ${imenaZaIspis} sa visinom ${colVisine[indeksiNajvisih[0]].innerHTML}.`
+        } else if (indeksiNajvisih.length > 1) {
+            rezultat.innerHTML = `Najviši su ${colImena[indeksiNajvisih[0]].innerHTML} i ${colImena[indeksiNajvisih[1]].innerHTML} sa visinom ${colVisine[indeksiNajvisih[0]].innerHTML}.`
+        } else if (indeksiNajvisih.length == 1) {
+            rezultat.innerHTML = `Najviši je ${colImena[indeksiNajvisih].innerHTML} sa visinom ${colVisine[indeksiNajvisih].innerHTML}.`
+        }
     }
-}
-visinaDjaka ();
+
 
 
 
