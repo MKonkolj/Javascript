@@ -7,24 +7,14 @@
 // function randomDayPicker (period) {
 //     return randomDay
 // }
+function randomDayPicker (period) {
+    let date = new Date().getTime();
+    period = period * 1000 * 60 * 60 * 24
+    let randomDate = new Date(Math.floor(Math.random() * ((period + date) - date) + date));
 
-// let period = 15;
-// const date = Date.now();
-
-
-// // const day = date.getDate();
-// // const month = date.getMonth();
-// // const year = date.getFullYear();
-
-// // const firstDayOfMonth = new Date (year, month, 1);
-// const daysInMonth = new Date (year, month + 1, 0).getDate();
-
-// // console.log(day);
-// // console.log(month);
-// // console.log(year);
-
-// console.log(date);
-// console.log(datePicked);
+    return randomDate.toLocaleDateString("sr");
+}
+// console.log(randomDayPicker(15));
 
 
 
@@ -47,7 +37,8 @@ function dodavanjeRazmaka() {
     
     console.log(result);
 }
-// dodavanjeRazmaka();
+
+// window.onload = dodavanjeRazmaka();
 
 
 
