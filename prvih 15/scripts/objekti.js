@@ -63,7 +63,7 @@ function skolskiPribor () {
 // Milan 172cm
 // Ivan 166cm
 
-
+function visinaDjaka (){
     // ispis tabele u HTML-u
     const djaci = [
         {ime: "Milica", visina: "153cm"},
@@ -158,10 +158,5 @@ function skolskiPribor () {
             rezultat.innerHTML = `Najviši je ${colImena[indeksiNajvisih].innerHTML} sa visinom ${colVisine[indeksiNajvisih].innerHTML}.`
         }
     }
-
-
-
-
-
-//kada mi indexOf vrati index najviše visine, isit index mogu da iskoristim za ime
-//ako ima više njih sa istom visinom onda treba da indexOf provučem kroz for loop da proveri sve?
+}
+// visinaDjaka ();
