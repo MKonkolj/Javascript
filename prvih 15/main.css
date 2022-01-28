@@ -1,0 +1,40 @@
+body {
+    font-family: Verdana;
+}
+table {
+    border-collapse: collapse;
+    font-size: 12px;
+}
+th, td {
+    padding: 7px 14px;
+    border: 1px solid #333
+}
+th {
+    background-color: #333;
+    color: orange;
+}
+#visinaBtn {
+    width: 170px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.container {
+    width: 620px;
+    background-color: #333;
+    padding: 10px;
+}
+#mainPic {
+    width: 100%;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: cover;
+}
+.select {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+img {
+    height: 200px;
+}

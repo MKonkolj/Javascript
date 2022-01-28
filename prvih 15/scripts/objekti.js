@@ -99,7 +99,7 @@ function visinaDjaka (){
     <tbody>
     </tbody>
     </table>
-    <button>Ko je najviši?</button>
+    <button id="visinaBtn">Ko je najviši?</button>
     <p id="rezultat"></p>`
     
     djaci.forEach(djak => {

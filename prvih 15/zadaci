@@ -189,5 +189,8 @@ svakog karaktera dodaje razmak.
 Primer: ulazni podatak - „ULAZ“, izlazni podatak - „U L A Z“.
 Obrađeni izlaz vratiti alert() metodom.
 Ceo kod ove skripte napisati tako da se izvrši čim se HTML dokument učita.
+
+
+
 26. Napraviti jedan div. Prikazati 3 proizvoljne slike u HTML-u ispod diva.
 Klikom na bilo koju sliku, slika se prikazuje u divu.
