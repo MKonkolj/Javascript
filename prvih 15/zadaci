@@ -177,8 +177,7 @@ Ivan 166cm
 
 
 24. Napraviti funkciju koja računa nasumični datum u zadatom periodu.
-Dužina perioda se prosleđuje kao parametar funkcije u vidu broja dana, a početak perioda je
-trenutak izvršavanja funkcije.
+Dužina perioda se prosleđuje kao parametar funkcije u vidu broja dana, a početak perioda je trenutak izvršavanja funkcije.
 Izbor nasumičnog datuma prikazati u konzoli.
 Zadatak snimiti u dokumentu „datum.js“
 
