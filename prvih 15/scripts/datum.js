@@ -195,48 +195,52 @@ stopBtn.onclick = function(e) {
 // Prvi red tabele sadrži naslove za kolone: „Imena“ i „Visine“.
 // Dodatno, tabelu treba stilizovati uz pomoć JS-a. Stilizacija se ogleda u dodavanju svim ćelijama tabele i samom table elementu ivicu: 1px solid #000
 
-// const podaci = [
-//     ["Milica", "153cm"],
-//     ["Zorica", "187cm"],
-//     ["Mirko", "145cm"],
-//     ["Dejan", "167cm"],
-//     ["Aleksandar", "164cm"],
-//     ["Ivana", "133cm"],
-//     ["Miloš", "174cm"],
-//     ["Gordana", "143cm"],
-//     ["Nemanja", "187cm"],
-//     ["Pavle", "152cm"],
-//     ["Jelena", "173cm"],
-//     ["Danica", "146cm"],
-//     ["Vladimir", "162cm"],
-//     ["Vesna", "173cm"],
-//     ["Tanja", "149cm"],
-//     ["Anica", "169cm"],
-//     ["Bojan", "187cm"],
-//     ["Goran", "187cm"],
-//     ["Milan", "172cm"],
-//     ["Ivan", "172cm"], 
-// ];
+// Array
+const podaci = [
+    ["Milica", "153cm"],
+    ["Zorica", "187cm"],
+    ["Mirko", "145cm"],
+    ["Dejan", "167cm"],
+    ["Aleksandar", "164cm"],
+    ["Ivana", "133cm"],
+    ["Miloš", "174cm"],
+    ["Gordana", "143cm"],
+    ["Nemanja", "187cm"],
+    ["Pavle", "152cm"],
+    ["Jelena", "173cm"],
+    ["Danica", "146cm"],
+    ["Vladimir", "162cm"],
+    ["Vesna", "173cm"],
+    ["Tanja", "149cm"],
+    ["Anica", "169cm"],
+    ["Bojan", "187cm"],
+    ["Goran", "187cm"],
+    ["Milan", "172cm"],
+    ["Ivan", "172cm"], 
+];
 
-// const body = document.querySelector("body");
 
-// body.innerHTML = 
-// `<table>
-// <thead>
-//     <tr>
-//         <th>Ime</th>
-//         <th>Visina</th>
-//     </tr>
-// </thead>
-// <tbody>
-// </tbody>
-// </table>`
+// HTML
+let tdStyle = ` style="border: 1px solid orange;"`
+document.body.innerHTML = 
+`<table ${tdStyle}>
+<thead>
+    <tr>
+        <th>Imena</th>
+        <th>Visine</th>
+    </tr>
+</thead>
+<tbody>
+</tbody>
+</table>`
 
-// const tbody = document.querySelector("tbody");
 
-// for (let i = 0; i < podaci.length; i++) {
-//     body.createElement
-// }
+// Popunjavanje tabele
+const tbody = document.querySelector("tbody");
+
+for (let i = 0; i < podaci.length; i++) {
+    tbody.innerHTML += `<tr><td${tdStyle}>${podaci[i][0]}</td><td${tdStyle}>${podaci[i][1]}</td></tr>`
+}
 
 
 // Zadatak 30 //////////////////////////////////////////////////////////
