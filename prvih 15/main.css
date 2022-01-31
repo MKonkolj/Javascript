@@ -1,5 +1,8 @@
 body {
     font-family: Verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 table {
     border-collapse: collapse;
@@ -37,4 +40,22 @@ th {
 }
 img {
     height: 200px;
+}
+table.zadatak27 {
+    width: 300px;
+    margin: 30px;
+    text-align: center;
+}
+.zadatak27 tbody tr {
+    height: 100px;
+}
+#tableResult {
+    margin: 30px;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-decoration-thickness: 2px;
+}
+#continueBtn, #stopBtn {
+    margin: 10px;
+    width: 100px;
 }

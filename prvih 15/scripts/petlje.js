@@ -17,7 +17,7 @@ function guraj () {
     (function () {
         desetice[desetice.length] = 60;
         desetice[2] = 35;
-        for (let deseetica in desetice) {
+        for (let desetica in desetice) {
             console.log(desetice[desetica] + "\n");
         }
     })();

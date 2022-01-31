@@ -193,3 +193,73 @@ Ceo kod ove skripte napisati tako da se izvrši čim se HTML dokument učita.
 
 26. Napraviti jedan div. Prikazati 3 proizvoljne slike u HTML-u ispod diva.
 Klikom na bilo koju sliku, slika se prikazuje u divu.
+
+
+
+27. Napraviti tabelu sa proizvoljnim podacima. (3x3) Ispod tabele p element čiji je sadržaj “Rezultat”.
+Potrebno je napisati skriptu koji će prebacivati sadržaj iz ćelije tabele u dati paragraf kada se levim tasterom miša klikne na datu ćeliju. Kada se klikne ostalim tasterima miša ništa se ne događa.
+Ćelija menja boju pozadine da bi se označilo nad kojom ćelijom se dogodio klik.
+Pozadina kliknute ćelije se posle 2 sekunde vraca na podrazumevanu. (belu)
+
+
+
+28. Body element je prazan, sve raditi kroz JS. Treba napisati koji će popuniti <body> element
+na sledeći način:
+- dodati dugmad „Stop“ i „Nastavi“
+- paragrafi pocinju da se dodaju - 15 paragrafa sa tekstom „#. Lorem ipsum dolor“. Gde
+se znak „#“ zamenjuje sa rednim brojem paragrafa (npr.: „6. Lorem ipsum dolor“). Paragrafi se
+dodaju jedan po jedan svake 1.5 sekunde dok ih ukupno ne bude petnaest. Nakon toga prestaje
+njihovo generisanje
+- dugmad služe da se klikom na njih zaustavi („Stop“) i nastavi („Nastavi“) generisanje
+paragrafa
+
+
+
+29. Uz pomoć JS-a kreirati HTML tabelu u i popuniti je podacima koji se nalaze u nizu “podaci”.
+Svaki element niza “podaci” je novi niz koji sadrži dve vrednost ime i visinu učenika.
+Prvi red tabele sadrži naslove za kolone: „Imena“ i „Visine“.
+Dodatno, tabelu treba stilizovati uz pomoć JS-a. Stilizacija se ogleda u dodavanju svim ćelijama
+tabele i samom table elementu ivicu: 1px solid #000
+
+
+
+30. Napraviti tabelu u HTML-u.
+● Ime prve kolone je “Minimum”.
+● Ime drudge kolone je “Maksimum”.
+● Ime treće kolone je “Kolicina”.
+● Popuniti je proizvoljnim podacima.
+● Popuniti najmanje 4 reda.
+Napisati skriptu koja menja vrednosti u tabeli na osnovu ulaznih podataka od strane korisnika
+prikupljenih preko prompt() dijaloga.
+Korisnik treba da navede kojoj ćeliji želi da promeni vrednost navođenjem broja reda i ćelije u
+tom redu brojeći odozgo i sleva. Ove podatke navodi u vidu tri broja odvojenih zarezom. Npr.
+3,4,500. Što se tumači kao: u 3. redu, 4. ćeliji se menja vrednost na vrednost 500.
+U prompt dijalogu se prosleđuje sledeća poruka: Unestite novu vrednost ćelije. Navesti red,
+kolonu, vrednost.
+Definisati funkciju zamena() kojoj se prosleđuju ulazni podaci i koja vrši zamenu podataka pod
+sledećim uslovima:
+● ako se menja vrednost u koloni „minimum“ nova vrednost mora biti manja od postojeće
+● ako se menja vrednost u koloni „maksimum“ nova vrednost mora biti veća od postojeće
+● za menjanje vrednosti u koloni „količina“ ne postoji ograničenje
+● ukoliko vrednosti ne ispunjavaju date uslove obavestiti korisnika alert() porukom:
+„Vrednost nije u opsegu“
+
+
+
+31. Dodati 2 inputa koja su tipa “number” i dugme “Izgenerisi tabelu”.
+● Prvi input govori koliko će tabela imati redova.
+● Drugi input govori koliko će tabela imati kolona.
+● Klikom na dugme izgenerisati tabelu.
+● Sadržaj polja tabele treba da ima brojeve. To jest redne brojeve ćelije.
+○ Tabela 3x3
+1 2 3
+4 5 6
+7 8 9
+
+
+
+32. Dodati input koji je tipa text. Skripta treba nakon svakog unosa karaktera da ga promeni u
+malo slovo. (ukoliko je unet karakter veliko slovo, naravno) Ukoliko je uneti karakter + promeniti
+ga na -.
+● Prilikom unosa, ukoliko se drži taster + i unosi se više znakova +, kada se otpusti taster,
+svaki + treba biti zamenjen sa znakom -
