@@ -9,7 +9,7 @@
 function biranjeVoca () {
 
 let voce = ["jabuka", "kruska", "breskva"];
-let mojOdabir = voce[Math.floor(Math.random()*3)];
+let mojOdabir = voce[Math.floor(Math.random()*voce.length)];
 
 //     if (mojOdabir == voce[0]) {
 //         console.log("Ja volim jabuke.");
@@ -20,7 +20,7 @@ let mojOdabir = voce[Math.floor(Math.random()*3)];
 
     switch (mojOdabir) {
         case voce[0]:
-            console.log("Ja volim jabuke.")
+            console.log("Ja volim jabuke.");
             break;
         case voce[1]:
             console.log(`${mojOdabir.charAt().toUpperCase().concat(mojOdabir.slice(1))} je moje omiljeno voće.`);

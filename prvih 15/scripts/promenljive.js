@@ -192,7 +192,7 @@ function nizovi () {
     }
     function doubleNum(array) {
         array.forEach(element => {
-            if (element * element > 100 && element * element < 10000 ) {
+            if (element * element >= 100 && element * element < 10000 ) {
                 dvocifrenNiz.push(element);
             }
         });
