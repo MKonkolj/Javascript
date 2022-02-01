@@ -362,7 +362,42 @@ function changeCell() {
 // 4 5 6
 // 7 8 9
 
+document.body.innerHTML = 
+`<h1>TABLE GENERATOR 5OOO</h1>
+<input id="numRows" type="number">
+<input id="numCols" type="number">
+<button id="tableGenerator">Izgeneriši tabelu</button>`;
 
+
+//after click
+
+// const numRows = document.querySelector("#numRows");
+// const numCols = document.querySelector("#numCols");
+const numRows = 10;
+const numCols = 4;
+const generateBtn = document.querySelector("#tableGenerator");
+
+let table = document.createElement("table");
+let thead = document.createElement("thead");
+let tbody = document.createElement("tbody");
+let tr = document.createElement("tr");
+let td = document.createElement("td");
+
+// loop koji dodaje redove, nestovano i ćelije
+for (let i = 1; i < numRows*numCols; i++) {
+    td.textContent = i;
+    tr.appendChild(td);
+    console.log(tr);
+    if (i % numCols == 0) {
+        tbody.appendChild(tr);
+        tr = document.createElement("tr");
+    }
+}
+
+
+table.appendChild(thead);
+table.appendChild(tbody);
+document.body.appendChild(table)
 
 
 // Zadatak 32 //////////////////////////////////////////////////////////
