@@ -195,52 +195,56 @@ stopBtn.onclick = function(e) {
 // Prvi red tabele sadrži naslove za kolone: „Imena“ i „Visine“.
 // Dodatno, tabelu treba stilizovati uz pomoć JS-a. Stilizacija se ogleda u dodavanju svim ćelijama tabele i samom table elementu ivicu: 1px solid #000
 
-// Array
-const podaci = [
-    ["Milica", "153cm"],
-    ["Zorica", "187cm"],
-    ["Mirko", "145cm"],
-    ["Dejan", "167cm"],
-    ["Aleksandar", "164cm"],
-    ["Ivana", "133cm"],
-    ["Miloš", "174cm"],
-    ["Gordana", "143cm"],
-    ["Nemanja", "187cm"],
-    ["Pavle", "152cm"],
-    ["Jelena", "173cm"],
-    ["Danica", "146cm"],
-    ["Vladimir", "162cm"],
-    ["Vesna", "173cm"],
-    ["Tanja", "149cm"],
-    ["Anica", "169cm"],
-    ["Bojan", "187cm"],
-    ["Goran", "187cm"],
-    ["Milan", "172cm"],
-    ["Ivan", "172cm"], 
-];
-
-
-// HTML
-let tdStyle = ` style="border: 1px solid orange;"`
-document.body.innerHTML = 
-`<table ${tdStyle}>
-<thead>
-    <tr>
-        <th>Imena</th>
-        <th>Visine</th>
-    </tr>
-</thead>
-<tbody>
-</tbody>
-</table>`
-
-
-// Popunjavanje tabele
-const tbody = document.querySelector("tbody");
-
-for (let i = 0; i < podaci.length; i++) {
-    tbody.innerHTML += `<tr><td${tdStyle}>${podaci[i][0]}</td><td${tdStyle}>${podaci[i][1]}</td></tr>`
+function tabelaIzNiza(){
+    // Array
+    const podaci = [
+        ["Milica", "153cm"],
+        ["Zorica", "187cm"],
+        ["Mirko", "145cm"],
+        ["Dejan", "167cm"],
+        ["Aleksandar", "164cm"],
+        ["Ivana", "133cm"],
+        ["Miloš", "174cm"],
+        ["Gordana", "143cm"],
+        ["Nemanja", "187cm"],
+        ["Pavle", "152cm"],
+        ["Jelena", "173cm"],
+        ["Danica", "146cm"],
+        ["Vladimir", "162cm"],
+        ["Vesna", "173cm"],
+        ["Tanja", "149cm"],
+        ["Anica", "169cm"],
+        ["Bojan", "187cm"],
+        ["Goran", "187cm"],
+        ["Milan", "172cm"],
+        ["Ivan", "172cm"], 
+    ];
+    
+    
+    // HTML
+    let tdStyle = ` style="border: 1px solid orange;"`
+    document.body.innerHTML = 
+    `<table ${tdStyle}>
+    <thead>
+        <tr>
+            <th>Imena</th>
+            <th>Visine</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>`
+    
+    
+    // Popunjavanje tabele
+    // po defaultu mi tabela bude crna pa sam je kroz JS ofarbao u orange
+    const tbody = document.querySelector("tbody");
+    
+    for (let i = 0; i < podaci.length; i++) {
+        tbody.innerHTML += `<tr><td${tdStyle}>${podaci[i][0]}</td><td${tdStyle}>${podaci[i][1]}</td></tr>`
+    }
 }
+// tabelaIzNiza();
 
 
 // Zadatak 30 //////////////////////////////////////////////////////////
@@ -259,6 +263,91 @@ for (let i = 0; i < podaci.length; i++) {
 // ● za menjanje vrednosti u koloni „količina“ ne postoji ograničenje
 // ● ukoliko vrednosti ne ispunjavaju date uslove obavestiti korisnika alert() porukom: „Vrednost nije u opsegu“
 
+function changeCell() {
+    document.body.innerHTML = 
+    `<table class="zadatak30">
+            <thead>
+                <tr>
+                    <th>Minimum</th>
+                    <th>Maksimum</th>
+                    <th>Količina</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>1150</td>
+                </tr>
+                <tr>
+                    <td>2.5</td>
+                    <td>7</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>2.5</td>
+                    <td>6.5</td>
+                    <td>850</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>1000</td>
+                </tr>
+            </tbody>
+        </table>
+    `;
+    
+    var userChanges = prompt("Unestite novu vrednost ćelije. Navesti red, kolonu, vrednost.");
+        
+    while (isNaN(+userChanges.split(",")[0]) || isNaN(+userChanges.split(",")[1]) || isNaN(+userChanges.split(",")[2])) {
+            alert ("Niste uneli dobre vrednosti!");
+            userChanges = prompt("Unestite novu vrednost ćelije. Navesti red, kolonu, vrednost.");
+    } 
+    
+    let userRow = +userChanges.split(",")[0];
+    let userCol = +userChanges.split(",")[1];
+    let userQuant = +userChanges.split(",")[2];
+    
+    zamena (userRow, userCol, userQuant);
+    
+    function zamena (userRow, userCol, userQuant) {
+        
+        const table = document.querySelectorAll(".zadatak30 tbody")[0];
+        
+        if (userRow <= table.rows.length && userRow > 0) {
+            switch (userCol) {
+                case 1:
+                    if (userQuant < table.rows[userRow-1].cells[userCol-1].innerText) {
+                        table.rows[userRow-1].cells[userCol-1].innerText = userQuant;
+                    } else {
+                        alert("Vrednost nije u opsegu")
+                    }
+                    break;
+                case 2:
+                    if (userQuant > table.rows[userRow-1].cells[userCol-1].innerText) {
+                        table.rows[userRow-1].cells[userCol-1].innerText = userQuant;
+                    } else {
+                        alert("Vrednost nije u opsegu")
+                    }
+                    break;
+                case 3:
+                    table.rows[userRow-1].cells[userCol-1].innerText = userQuant;
+                    break;
+                default:
+                    alert ("Kolona koju ste odabrali nije u opsegu");
+                }
+        } else {
+            alert("Red koji je odabrali nije u opsegu")
+        }
+    }
+}
+// changeCell ();
 
 
 
@@ -282,3 +371,4 @@ for (let i = 0; i < podaci.length; i++) {
 // ga na -.
 // ● Prilikom unosa, ukoliko se drži taster + i unosi se više znakova +, kada se otpusti taster,
 // svaki + treba biti zamenjen sa znakom -
+

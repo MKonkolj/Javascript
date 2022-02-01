@@ -34,7 +34,7 @@ function skolskiPribor () {
 
 
 
-// Zadatak 22 //////////////////////////////////////////////////////////
+// Zadatak 23 //////////////////////////////////////////////////////////
 // 23. Na sistematskom pregledu đaka utvrđene su sledeće visine. Smestiti ove podatke u HTML tabelu. Prva kolona: imena, druga kolona izmerene vrednosti.
 // Napisati skriptu koja će preuzeti podatke iz ove tabele i izračunati koja osoba je najviša.
 // Rezultat proračuna objavljuje se u p elementu ispod tabele u vidu poruke:
@@ -63,7 +63,7 @@ function skolskiPribor () {
 // Milan 172cm
 // Ivan 166cm
 
-function visinaDjaka (){
+
     // ispis tabele u HTML-u
     const djaci = [
         {ime: "Milica", visina: "153cm"},
@@ -158,5 +158,3 @@ function visinaDjaka (){
             rezultat.innerHTML = `Najviši je ${colImena[indeksiNajvisih].innerHTML} sa visinom ${colVisine[indeksiNajvisih].innerHTML}.`
         }
     }
-}
-// visinaDjaka ();

@@ -59,3 +59,7 @@ table.zadatak27 {
     margin: 10px;
     width: 100px;
 }
+
+.zadatak30 td {
+    text-align: right;
+}
