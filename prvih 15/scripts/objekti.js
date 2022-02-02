@@ -137,11 +137,11 @@ function visinaDjaka (){
     const btn = document.getElementsByTagName("button")[0];
     const rezultat = document.getElementById("rezultat");
 
+    // Dodao sam .parentElement kako bi na tr stavio stilove umesto da se posebno targetuju posebno obe ćelije
     btn.onclick = () => {
         let imenaZaIspis = "";
         indeksiNajvisih.forEach(element => {
-            colVisine[element].style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
-            colImena[element].style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
+            colVisine[element].parentElement.style.background = "linear-gradient(0deg, rgba(255,243,62,1) 0%, rgba(245,178,20,1) 100%)";
             }
         );
 

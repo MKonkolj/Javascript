@@ -57,6 +57,7 @@ function picsSelector (){
         </div>
     </div>`
 
+        // ovo mže da se skrati sa for loopom
     const pic1 = document.querySelector("#pic1");
     const pic2 = document.querySelector("#pic2");
     const pic3 = document.querySelector("#pic3");
@@ -122,7 +123,7 @@ function table3x3(){
             tableResult.innerText = cell.innerText;
             cell.style.backgroundColor = "orange";
             cell.style.transition = "100ms ease-in";
-            setTimeout (() => {cell.style.backgroundColor = "inherit"}, 2000)
+            setTimeout (() => cell.style.backgroundColor = "inherit", 2000)
         }
     });
 }
@@ -169,25 +170,6 @@ function writeStopStart() {
     }
 }
 // writeStopStart();
-
-
-/*
-let counter = 0;
-var interval;
-function printLines () {
-    interval = setInterval (() => {
-        counter++;
-        body.innerHTML += `<p>${counter}. Lorem ipsum dolor</p>`   //ne radi sa innerHTML jer zablokira event loop iz nekog razloga
-        if (counter == 15) {
-            clearInterval(interval);
-        }
-    }, 500)
-}
-startBtn.onclick = printLines;
-stopBtn.onclick = function(e) {
-    console.log(e);
-}
-*/
 
 // Zadatak 29 //////////////////////////////////////////////////////////
 // 29. Uz pomoć JS-a kreirati HTML tabelu u i popuniti je podacima koji se nalaze u nizu “podaci”.
@@ -361,44 +343,71 @@ function changeCell() {
 // 1 2 3
 // 4 5 6
 // 7 8 9
-
-document.body.innerHTML = 
-`<h1>TABLE GENERATOR 5OOO</h1>
-<input id="numRows" type="number">
-<input id="numCols" type="number">
-<button id="tableGenerator">Izgeneriši tabelu</button>`;
-
-
-//after click
-
-// const numRows = document.querySelector("#numRows");
-// const numCols = document.querySelector("#numCols");
-const numRows = 10;
-const numCols = 4;
-const generateBtn = document.querySelector("#tableGenerator");
-
-let table = document.createElement("table");
-let thead = document.createElement("thead");
-let tbody = document.createElement("tbody");
-let tr = document.createElement("tr");
-let td = document.createElement("td");
-
-// loop koji dodaje redove, nestovano i ćelije
-for (let i = 1; i < numRows*numCols; i++) {
-    td.textContent = i;
-    tr.appendChild(td);
-    console.log(tr);
-    if (i % numCols == 0) {
-        tbody.appendChild(tr);
-        tr = document.createElement("tr");
+function tableGenerator() {
+    document.body.innerHTML = 
+    `<h1>TABLE GENERATOR 5OOO</h1>
+    <input id="numRows" type="number">
+    <input id="numCols" type="number">
+    <button id="tableGenerator">Izgeneriši tabelu</button>`;
+    
+    
+    document.querySelector("#tableGenerator").onclick = () => {
+    
+        //inputs and decalrations
+        const numRows = +document.querySelector("#numRows").value;
+        const numCols = +document.querySelector("#numCols").value;
+    
+        if (numRows <= 0 || numCols <= 0) {
+            alert("Unete vrednosti moraju biti pozitivni brojevi");
+            window.location.reload();
+        }
+        
+        let table = document.createElement("table");
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+        let tr = document.createElement("tr");
+        let thr = document.createElement("tr");
+        let bodyChildren = document.body.children;
+        
+        
+        //malo stilizacije
+        document.querySelector("#numRows").style.marginBottom = "40px"
+    
+        // obriši postojeći table ako ima 
+        for (let i = 0; i < bodyChildren.length; i++) {
+            if (bodyChildren[i].nodeName == "TABLE") {
+                document.body.removeChild(bodyChildren[i]);
+            }
+        };
+    
+        // loop koji generiše ćelije i redove, pa ih appenduje u tbody
+        for (let i = 1; i <= numRows*numCols; i++) {
+            let td = document.createElement("td");
+            td.innerText = `${i}.`;
+            tr.appendChild(td);
+            if (i % numCols == 0) {
+                tbody.appendChild(tr);
+                tr = document.createElement("tr");
+            }
+        }
+    
+        //loop koji dodaje zaglavlje
+        for (let i = 1; i <= numCols; i++) {
+            let th = document.createElement("th");
+            th.innerText = `${i}. column`
+            thr.appendChild(th);
+            if (i == numCols) {
+                thead.appendChild(thr);
+            }
+        }
+        
+        // konačno appendovanje u table i u body dokumenta
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        document.body.appendChild(table)
     }
 }
-
-
-table.appendChild(thead);
-table.appendChild(tbody);
-document.body.appendChild(table)
-
+// tableGenerator();
 
 // Zadatak 32 //////////////////////////////////////////////////////////
 // 32. Dodati input koji je tipa text. Skripta treba nakon svakog unosa karaktera da ga promeni u
@@ -406,4 +415,15 @@ document.body.appendChild(table)
 // ga na -.
 // ● Prilikom unosa, ukoliko se drži taster + i unosi se više znakova +, kada se otpusti taster,
 // svaki + treba biti zamenjen sa znakom -
+
+function getLow() {
+    document.body.innerHTML = `<input id="bigInput" type="text" placeholder="( ͡° ͜ʖ ͡°)">`;
+    const input = document.querySelector("#bigInput");
+    
+    input.onkeyup = () => {
+        input.value = input.value.toLowerCase();
+        input.value = input.value.replace(/\+/g, "-");
+    }
+}
+// getLow();
 
